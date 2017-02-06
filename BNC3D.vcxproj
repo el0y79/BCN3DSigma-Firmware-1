@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Marlin\LCD Menu Tree.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Marlin\BlinkM.cpp" />
+    <ClCompile Include="Marlin\cardreader.cpp" />
+    <ClCompile Include="Marlin\ConfigurationStore.cpp" />
+    <ClCompile Include="Marlin\digipot_mcp4451.cpp" />
+    <ClCompile Include="Marlin\genieArduino.cpp" />
+    <ClCompile Include="Marlin\Hysteresis.cpp" />
+    <ClCompile Include="Marlin\language.cpp" />
+    <ClCompile Include="Marlin\LiquidCrystalRus.cpp" />
+    <ClCompile Include="Marlin\Marlin_main.cpp" />
+    <ClCompile Include="Marlin\motion_control.cpp" />
+    <ClCompile Include="Marlin\planner.cpp" />
+    <ClCompile Include="Marlin\qr_solve.cpp" />
+    <ClCompile Include="Marlin\Sd2Card.cpp" />
+    <ClCompile Include="Marlin\SdBaseFile.cpp" />
+    <ClCompile Include="Marlin\SdFatUtil.cpp" />
+    <ClCompile Include="Marlin\SdFile.cpp" />
+    <ClCompile Include="Marlin\SdVolume.cpp" />
+    <ClCompile Include="Marlin\SD_ListFiles.cpp" />
+    <ClCompile Include="Marlin\Servo.cpp" />
+    <ClCompile Include="Marlin\stepper.cpp" />
+    <ClCompile Include="Marlin\temperature.cpp" />
+    <ClCompile Include="Marlin\ultralcd.cpp" />
+    <ClCompile Include="Marlin\vector_3.cpp" />
+    <ClCompile Include="Marlin\watchdog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Marlin\BlinkM.h" />
+    <ClInclude Include="Marlin\cardreader.h" />
+    <ClInclude Include="Marlin\Configuration.h" />
+    <ClInclude Include="Marlin\ConfigurationStore.h" />
+    <ClInclude Include="Marlin\Configuration_adv.h" />
+    <ClInclude Include="Marlin\DOGMbitmaps.h" />
+    <ClInclude Include="Marlin\dogm_font_data_marlin.h" />
+    <ClInclude Include="Marlin\dogm_lcd_implementation.h" />
+    <ClInclude Include="Marlin\fastio.h" />
+    <ClInclude Include="Marlin\genieArduino.h" />
+    <ClInclude Include="Marlin\Hysteresis.h" />
+    <ClInclude Include="Marlin\language.h" />
+    <ClInclude Include="Marlin\LCD_Handler.h" />
+    <ClInclude Include="Marlin\LiquidCrystalRus.h" />
+    <ClInclude Include="Marlin\Marlin.h" />
+    <ClInclude Include="Marlin\motion_control.h" />
+    <ClInclude Include="Marlin\pins.h" />
+    <ClInclude Include="Marlin\planner.h" />
+    <ClInclude Include="Marlin\qr_solve.h" />
+    <ClInclude Include="Marlin\Sd2Card.h" />
+    <ClInclude Include="Marlin\Sd2PinMap.h" />
+    <ClInclude Include="Marlin\SdBaseFile.h" />
+    <ClInclude Include="Marlin\SdFatConfig.h" />
+    <ClInclude Include="Marlin\SdFatStructs.h" />
+    <ClInclude Include="Marlin\SdFatUtil.h" />
+    <ClInclude Include="Marlin\SdFile.h" />
+    <ClInclude Include="Marlin\SdInfo.h" />
+    <ClInclude Include="Marlin\SdVolume.h" />
+    <ClInclude Include="Marlin\SD_ListFiles.h" />
+    <ClInclude Include="Marlin\Servo.h" />
+    <ClInclude Include="Marlin\speed_lookuptable.h" />
+    <ClInclude Include="Marlin\stepper.h" />
+    <ClInclude Include="Marlin\temperature.h" />
+    <ClInclude Include="Marlin\thermistortables.h" />
+    <ClInclude Include="Marlin\Touch_Screen_Definitions.h" />
+    <ClInclude Include="Marlin\ultralcd.h" />
+    <ClInclude Include="Marlin\ultralcd_implementation_hitachi_HD44780.h" />
+    <ClInclude Include="Marlin\ultralcd_st7920_u8glib_rrd.h" />
+    <ClInclude Include="Marlin\vector_3.h" />
+    <ClInclude Include="Marlin\watchdog.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
+    <RootNamespace>BNC3D</RootNamespace>
+    <ProjectName>BNC3D</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;I:\BCN3DSigma-Firmware\BNC3D\BNC3D;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;I:\vs2015\Common7\IDE\Extensions\wn1i35aq.3dr\Micro Platforms\default\debuggers;C:\Users\el0y\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>I:\BCN3DSigma-Firmware\BNC3D\BNC3D\__vm\.BNC3D.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=165;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
