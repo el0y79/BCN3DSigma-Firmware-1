@@ -1,0 +1,8 @@
+PID values? Übernehmen oder nicht?
+Achsen invertieren?
+Maximale Positionen?!
+Extruderabmessungen im Code erfassen (Abstand der extruder zueinander)
+Autoleveling?
+Thermistoren?
+ist bcn3d bowden?
+SD support?

@@ -514,7 +514,7 @@ void check_axes_activity()
   #else
   
   //Rapduch
-  #if MOTHERBOARD == BCN3D_BOARD
+  #if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 	if (active_extruder == LEFT_EXTRUDER){
 		analogWrite(FAN_PIN,tail_fan_speed);
 		analogWrite(FAN2_PIN,0);

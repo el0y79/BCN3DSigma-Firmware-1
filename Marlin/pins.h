@@ -150,20 +150,20 @@
 #error Oops!  Make sure you have 'Arduino Mega' selected from the 'Tools -> Boards' menu.
 #endif
 
-#define LARGE_FLASH true //TODO: check
+#define LARGE_FLASH true 
 
 //Rapduch
 #define MYSERIAL_SCREEN Serial2 //TODO: check
 #define RESETLINE		9 //TODO: pin to reset 4D LCD during startup
-#define AUTOLEVELPIN	8 //TODO: check
+#define AUTOLEVELPIN	8 //unused - wird im gesamten code nicht verwendet.
 
 #define X_ENABLE_PIN	48
 #define X_STEP_PIN		17
 #define X_DIR_PIN		16
 
-#define X2_STEP_PIN		29
-#define X2_DIR_PIN		28
-#define X2_ENABLE_PIN	39
+#define X2_STEP_PIN		29 //normalerweise E2_STEP
+#define X2_DIR_PIN		28 //normalerweise E2_DIR
+#define X2_ENABLE_PIN	39 //normalerweise E2_ENABLE
 
 #define X_MIN_PIN		37 //Minim endstop
 #define X_MAX_PIN		36 //Max endstop per 2nd extruder
@@ -182,7 +182,7 @@
 
 #define Z_MIN_PIN		33
 #define Z_MAX_PIN		-1
-#define Z2_MIN_PIN		32 	
+#define Z2_MIN_PIN		32 	//normalerweise Z_MAX
 
 #define Y_STEP_PIN		54
 #define Y_DIR_PIN		47
@@ -195,37 +195,53 @@
 
 //Layer Fans
 #define FAN_PIN			7
-#define	FAN2_PIN		6  //TODO: check
+#define	FAN2_PIN		8  
 //RGB LEDs
-#define GREEN			11 //TODO: check
-#define	RED				12 //TODO: check
-#define BLUE			13 //TODO: check
+#define GREEN			11 //unused
+#define	RED				12 //unused
+#define BLUE			13 //unused
 //Power Supply Relay
-#define	RELAY			10 //TODO: check
+#define	RELAY			10 //unused
 //HOTEND HEATERS
-#define	HEATER_0_PIN	44 //TODO
-#define	HEATER_1_PIN	7  //TODO
+#define	HEATER_0_PIN	2 
+#define	HEATER_1_PIN	3  
 #define HEATER_2_PIN	-1
 //HEATED BED
-#define HEATER_BED_PIN	46 //TODO
-//THERMISTORS
-#define TEMP_0_PIN		9//62//A9 //TODO
-#define TEMP_1_PIN		8//63//A8 //TODO
-#define TEMP_2_PIN		-1
-#define TEMP_BED_PIN	15//69//A15 //TODO
+#define HEATER_BED_PIN	9 
 
-#define MLED			68//A14 //TODO
+//THERMISTORS
+#if (TEMP_SENSOR_0==-1)
+	#define TEMP_0_PIN         6    // ANALOG NUMBERING - connector *K1* on RUMBA thermocouple ADD ON is used
+#else
+	#define TEMP_0_PIN         15   // ANALOG NUMBERING - default connector for thermistor *T0* on rumba board is used
+#endif
+
+#if (TEMP_SENSOR_1==-1)
+	#define TEMP_1_PIN         5    // ANALOG NUMBERING - connector *K2* on RUMBA thermocouple ADD ON is used
+#else
+	#define TEMP_1_PIN         14   // ANALOG NUMBERING - default connector for thermistor *T1* on rumba board is used
+#endif
+
+#define TEMP_2_PIN		-1
+
+#if (TEMP_SENSOR_BED==-1)
+	#define TEMP_BED_PIN       7    // ANALOG NUMBERING - connector *K3* on RUMBA thermocouple ADD ON is used <-- this can not be used when TEMP_SENSOR_2 is defined as thermocouple
+#else
+	#define TEMP_BED_PIN       11   // ANALOG NUMBERING - default connector for thermistor *THB* on rumba board is used
+#endif
+
+#define MLED			68 //unused - wird im gesamten code nicht verwendet.
 
 #define SDSS			53
 #define SDPOWER			-1
 #define LED_PIN			-1
-//#define SDCARDDETECT	-1
+#define SDCARDDETECT	-1
 
-#ifndef SDSUPPORT //TODO
+#ifndef SDSUPPORT 
 // these pins are defined in the SD library if building with SD support
-#define SCK_PIN          52 //TODO
-#define MISO_PIN         50 //TODO
-#define MOSI_PIN         51 //TODO
+#define SCK_PIN          52 //we are using sdsupport, so dont care
+#define MISO_PIN         50 
+#define MOSI_PIN         51 
 #endif
 
 #endif

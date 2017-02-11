@@ -481,7 +481,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #endif
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD
+#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 	#define X_MAX_POS 305.6//312 //Distance between extruders
 	//#define X_MAX_POS 210 //Bed X
 	#define X_MIN_POS 0
@@ -535,7 +535,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
   #else  // not AUTO_BED_LEVELING_GRID
     // with no grid, just probe 3 arbitrary points.  A simple cross-product
-    // is used to esimate the plane of the print bed
+    // is used to estimate the plane of the print bed
 
       #define ABL_PROBE_PT_1_X 20
       #define ABL_PROBE_PT_1_Y 260
@@ -707,7 +707,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 
 #ifdef Z_SIGMA_AUTOLEVEL
-	#if MOTHERBOARD == BCN3D_BOARD
+	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 		#define XY_SIGMA_TRAVEL_SPEED 4000
 	#else
 		#define XY_SIGMA_TRAVEL_SPEED 8000
@@ -726,7 +726,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 		#endif
 	#endif
 	
-	#if MOTHERBOARD == BCN3D_BOARD
+	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 		#define X_SIGMA_PROBE_OFFSET_FROM_EXTRUDER  17//20
 		#define Y_SIGMA_PROBE_OFFSET_FROM_EXTRUDER	24
 		#define Z_SIGMA_PROBE_OFFSET_FROM_EXTRUDER  2.7//2.80//3.4 //It is negative, it is compensated
@@ -809,7 +809,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 	#endif
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD
+#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 		#define EXTRUDER_OFFSET_Y {0.0,  -0.15}  // (in mm) for each extruder, offset of the hotend on the Y axis
 		#define EXTRUDER_OFFSET_Z {0.0 , 0.0}
 #endif
