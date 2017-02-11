@@ -1195,7 +1195,7 @@ void tp_init()
   #endif  
   #if defined(FAN_PIN) && (FAN_PIN > -1) 
     SET_OUTPUT(FAN_PIN);
-	#if MOTHERBOARD ==BCN3D_BOARD
+	#if MOTHERBOARD ==BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 		SET_OUTPUT(FAN2_PIN);
 	#endif
     #ifdef FAST_PWM_FAN

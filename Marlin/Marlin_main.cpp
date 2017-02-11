@@ -702,7 +702,7 @@ void setup()
 			
 	//LCD START routine
 	
-	
+#if MOTHERBOARD == BCN3D_BOARD
 			pinMode(RED,OUTPUT);
 			pinMode(GREEN,OUTPUT);
 			pinMode(BLUE,OUTPUT);
@@ -711,7 +711,7 @@ void setup()
 			digitalWrite(GREEN,LOW);
 			digitalWrite(BLUE,LOW);	
 		//st_init();    // Initialize stepper, this enables interrupts!
-	
+#endif
 	
 	#ifdef SIGMA_TOUCH_SCREEN
 
@@ -760,7 +760,7 @@ void setup()
 			
 			genie.WriteStr(STRING_VERSION,VERSION_STRING);
 
-#ifdef MOTHERBOARD == BCN3D_BOARD		
+#if MOTHERBOARD == BCN3D_BOARD		
 			while(led < 256){
 				if (millis() >= waitPeriod)
 				{

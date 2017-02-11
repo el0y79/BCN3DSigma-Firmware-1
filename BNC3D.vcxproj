@@ -83,6 +83,7 @@
     <ClInclude Include="__vm\.BNC3D.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="OpenPoints.txt" />
     <Text Include="RumbaBoardPins.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
