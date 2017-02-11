@@ -143,6 +143,94 @@
 
 //------------------------------
 
+#if MOTHERBOARD == RUMBA_BCN3D 
+
+#define KNOWN_BOARD 1
+#ifndef __AVR_ATmega2560__
+#error Oops!  Make sure you have 'Arduino Mega' selected from the 'Tools -> Boards' menu.
+#endif
+
+#define LARGE_FLASH true //TODO: check
+
+//Rapduch
+#define MYSERIAL_SCREEN Serial2 //TODO: check
+#define RESETLINE		9 //TODO: pin to reset 4D LCD during startup
+#define AUTOLEVELPIN	8 //TODO: check
+
+#define X_ENABLE_PIN	48
+#define X_STEP_PIN		17
+#define X_DIR_PIN		16
+
+#define X2_STEP_PIN		29
+#define X2_DIR_PIN		28
+#define X2_ENABLE_PIN	39
+
+#define X_MIN_PIN		37 //Minim endstop
+#define X_MAX_PIN		36 //Max endstop per 2nd extruder
+
+#define E0_STEP_PIN		23
+#define E0_DIR_PIN		22
+#define E0_ENABLE_PIN	24
+
+#define E1_STEP_PIN		26
+#define E1_DIR_PIN		25
+#define E1_ENABLE_PIN	27
+
+#define Z_STEP_PIN		57
+#define Z_DIR_PIN		56
+#define Z_ENABLE_PIN	62
+
+#define Z_MIN_PIN		33
+#define Z_MAX_PIN		-1
+#define Z2_MIN_PIN		32 	
+
+#define Y_STEP_PIN		54
+#define Y_DIR_PIN		47
+#define Y_ENABLE_PIN	55
+
+#define Y_MAX_PIN		35
+#define Y_MIN_PIN		-1
+
+#define PS_ON_PIN       45
+
+//Layer Fans
+#define FAN_PIN			7
+#define	FAN2_PIN		6  //TODO: check
+//RGB LEDs
+#define GREEN			11 //TODO: check
+#define	RED				12 //TODO: check
+#define BLUE			13 //TODO: check
+//Power Supply Relay
+#define	RELAY			10 //TODO: check
+//HOTEND HEATERS
+#define	HEATER_0_PIN	44 //TODO
+#define	HEATER_1_PIN	7  //TODO
+#define HEATER_2_PIN	-1
+//HEATED BED
+#define HEATER_BED_PIN	46 //TODO
+//THERMISTORS
+#define TEMP_0_PIN		9//62//A9 //TODO
+#define TEMP_1_PIN		8//63//A8 //TODO
+#define TEMP_2_PIN		-1
+#define TEMP_BED_PIN	15//69//A15 //TODO
+
+#define MLED			68//A14 //TODO
+
+#define SDSS			53
+#define SDPOWER			-1
+#define LED_PIN			-1
+//#define SDCARDDETECT	-1
+
+#ifndef SDSUPPORT //TODO
+// these pins are defined in the SD library if building with SD support
+#define SCK_PIN          52 //TODO
+#define MISO_PIN         50 //TODO
+#define MOSI_PIN         51 //TODO
+#endif
+
+#endif
+
+
 //////////////////RepRapBCN Electronics Rev.C/////////////////////
 //------------------------------
 #if MOTHERBOARD == BCN3D_BOARD 
