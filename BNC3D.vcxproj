@@ -81,6 +81,9 @@
     <ClInclude Include="Marlin\vector_3.h" />
     <ClInclude Include="Marlin\watchdog.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="RumbaBoardPins.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
     <RootNamespace>BNC3D</RootNamespace>
