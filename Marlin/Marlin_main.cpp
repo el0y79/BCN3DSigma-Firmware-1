@@ -716,7 +716,7 @@ void setup()
 	#ifdef SIGMA_TOUCH_SCREEN
 
 			
-		#if MOTHERBOARD == BCN3D_BOARD
+		#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 			MYSERIAL_SCREEN.begin(200000);			
 	
 			genie.Begin(MYSERIAL_SCREEN);   // Use Serial3  for talking to the Genie Library, and to the 4D Systems display
@@ -755,14 +755,12 @@ void setup()
 					i+=1;
 					waitPeriod = 40+millis();	//Every 5s
 				}
-				
-				
-				
 			}
 			
 			
 			genie.WriteStr(STRING_VERSION,VERSION_STRING);
-			
+
+#ifdef MOTHERBOARD == BCN3D_BOARD		
 			while(led < 256){
 				if (millis() >= waitPeriod)
 				{
@@ -774,7 +772,7 @@ void setup()
 					led++;
 				}
 			}
-			
+#endif
 				genie.WriteObject(GENIE_OBJ_FORM,FORM_MAIN_SCREEN,0);
 				// loads data from EEPROM if available else uses defaults (and resets step acceleration rate)
 				log_prints = 0;
@@ -803,8 +801,6 @@ void setup()
 	servo_init();
 	
 	
-	
-	
 	#if MOTHERBOARD == BCN3D_BOARD	
 	
 	
@@ -820,13 +816,6 @@ void setup()
 	digitalWrite(RELAY, LOW);
 	delay(1);
 	digitalWrite(RELAY, HIGH); //Relay On
-	
-	
-	
-	
-	
-	
-	
 	
 	
 		

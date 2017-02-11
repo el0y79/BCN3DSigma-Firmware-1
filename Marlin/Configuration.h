@@ -99,10 +99,11 @@
 //Defining Boards supported
 #define BCN3D_BOARD		15
 #define MEGATRONICS_V3	703
+#define RUMBA_BNC3D		16
 
 #ifndef MOTHERBOARD
 //#define MOTHERBOARD MEGATRONICS_V3 //Megatronics v3
-#define MOTHERBOARD BCN3D_BOARD //Marcotronics
+#define MOTHERBOARD BCN3D_BOARD 
 #endif
 
 #if MOTHERBOARD == MEGATRONICS_V3
@@ -265,14 +266,7 @@
 #endif
 
 
-#if MOTHERBOARD == BCN3D_BOARD
-	////////DEPRECATED First PID
-	////////#define  DEFAULT_Kp 23.12
-	////////#define  DEFAULT_Ki 2.12
-	////////#define  DEFAULT_Kd 62.98
-	//#define  DEFAULT_Kp 16.51
-	//#define  DEFAULT_Ki 1.17
-	//#define  DEFAULT_Kd 58.05
+#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
 	#define  DEFAULT_Kp  15.16
 	#define  DEFAULT_Ki  1.16
 	#define  DEFAULT_Kd  49.38
@@ -317,11 +311,7 @@
 #endif
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD
-	//DEPRECATED first PID
-   //#define  DEFAULT_bedKp 270.22
-   //#define  DEFAULT_bedKi 44.23
-   //#define  DEFAULT_bedKd 370.78
+#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
    #define  DEFAULT_bedKp 218.76
    #define  DEFAULT_bedKi 38.70
    #define  DEFAULT_bedKd 321.59
