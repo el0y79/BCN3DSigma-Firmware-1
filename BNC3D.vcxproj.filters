@@ -212,6 +212,9 @@
     <ClInclude Include="Marlin\watchdog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="__vm\.BNC3D.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="RumbaBoardPins.txt" />
