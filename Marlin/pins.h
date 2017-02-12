@@ -157,7 +157,6 @@
 //Rapduch
 #define MYSERIAL_SCREEN Serial1 //pins 18 und 19, normalerweise LCD_PINS_D4 und LCD_PINS_RS
 #define RESETLINE		38 //normalerweise LCD_PINS_D5
-#define AUTOLEVELPIN	8 //unused - wird im gesamten code nicht verwendet.
 
 #define X_ENABLE_PIN	48
 #define X_STEP_PIN		17
@@ -198,12 +197,7 @@
 //Layer Fans
 #define FAN_PIN			7
 #define	FAN2_PIN		8  
-//RGB LEDs
-#define GREEN			11 //unused
-#define	RED				12 //unused
-#define BLUE			13 //unused
-//Power Supply Relay
-#define	RELAY			10 //unused
+
 //HOTEND HEATERS
 #define	HEATER_0_PIN	2 
 #define	HEATER_1_PIN	3  
@@ -231,8 +225,6 @@
 #else
 	#define TEMP_BED_PIN       11   // ANALOG NUMBERING - default connector for thermistor *THB* on rumba board is used
 #endif
-
-#define MLED			68 //unused - wird im gesamten code nicht verwendet.
 
 #define SDSS			53
 #define SDPOWER			-1
