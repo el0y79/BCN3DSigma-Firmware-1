@@ -153,8 +153,8 @@
 #define LARGE_FLASH true 
 
 //Rapduch
-#define MYSERIAL_SCREEN Serial2 //TODO: check
-#define RESETLINE		9 //TODO: pin to reset 4D LCD during startup
+#define MYSERIAL_SCREEN Serial1 //pins 18 und 19, normalerweise LCD_PINS_D4 und LCD_PINS_RS
+#define RESETLINE		38 //normalerweise LCD_PINS_D5
 #define AUTOLEVELPIN	8 //unused - wird im gesamten code nicht verwendet.
 
 #define X_ENABLE_PIN	48
