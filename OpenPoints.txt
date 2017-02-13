@@ -1,8 +1,8 @@
-PID values? Übernehmen oder nicht?
-Achsen invertieren?
-Maximale Positionen?!
-Extruderabmessungen im Code erfassen (Abstand der extruder zueinander)
-Autoleveling?
-Thermistoren?
-ist bcn3d bowden?
-SD support?
+PID values? Übernehmen oder nicht? >> Config - OK
+Achsen invertieren? >> Config - OK
+Maximale Positionen?! >> Config - OK
+Extruderabmessungen im Code erfassen (Abstand der extruder zueinander) >> Config - siehe unten in Configuration.h
+Autoleveling? >> wenn möglich - OK
+Thermistoren? >> Config - an der üblichen Stelle
+ist bcn3d bowden? >> ja wir nicht - OK
+SD support? >> Klar!!

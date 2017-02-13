@@ -183,7 +183,7 @@
 
 #define Z_MIN_PIN		33
 #define Z_MAX_PIN		-1
-#define Z2_MIN_PIN		32 	//normalerweise Z_MAX
+#define Z2_MIN_PIN		33 	//normalerweise Z_MAX - Z_MIN == Z2_MIN wegen bed sensor
 
 #define Y_STEP_PIN		54
 #define Y_DIR_PIN		47
