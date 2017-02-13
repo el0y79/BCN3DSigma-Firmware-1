@@ -111,7 +111,44 @@
 	//#define PROTO2
 #endif
 
+//invert axis
+#if MOTHERBOARD == RUMBA_BNC3D
+#define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true
+#define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
+#define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true
+#define INVERT_E0_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
+#define INVERT_E1_DIR true    // for direct drive extruder v9 set to true, for geared extruder set to false
+#define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
+#endif
 
+//PID values
+#if MOTHERBOARD == RUMBA_BNC3D
+#define  DEFAULT_Kp  15.16
+#define  DEFAULT_Ki  1.16
+#define  DEFAULT_Kd  49.38
+#endif						
+
+#if MOTHERBOARD == RUMBA_BNC3D
+#define  DEFAULT_bedKp 218.76
+#define  DEFAULT_bedKi 38.70
+#define  DEFAULT_bedKd 321.59
+#endif
+
+//max distances
+#if MOTHERBOARD == RUMBA_BNC3D
+#define X_MAX_POS 303.9//312 //Distance between extruders
+	//#define X_MAX_POS 210 //Bed X
+#define X_MIN_POS 0
+#define Y_MAX_POS 295
+#define Y_MIN_POS 0
+#define Z_MAX_POS 210
+#define Z_MIN_POS 0
+#endif
+
+#if MOTHERBOARD == RUMBA_BNC3D
+#define EXTRUDER_OFFSET_Y {0.0,  -0.15}  // (in mm) for each extruder, offset of the hotend on the Y axis
+#define EXTRUDER_OFFSET_Z {0.0 , 0.0}
+#endif
 
 // Define this to set a custom name for your generic Mendel,
 // #define CUSTOM_MENDEL_NAME "This Mendel"
@@ -266,11 +303,10 @@
 #endif
 
 
-#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == BCN3D_BOARD
 	#define  DEFAULT_Kp  15.16
 	#define  DEFAULT_Ki  1.16
 	#define  DEFAULT_Kd  49.38
-
 #endif						
 #endif // PIDTEMP
 // Bed Temperature Control
@@ -311,7 +347,7 @@
 #endif
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == BCN3D_BOARD 
    #define  DEFAULT_bedKp 218.76
    #define  DEFAULT_bedKi 38.70
    #define  DEFAULT_bedKd 321.59
@@ -437,7 +473,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == BCN3D_BOARD 
 #define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true
@@ -478,7 +514,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #endif
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == BCN3D_BOARD
 	#define X_MAX_POS 303.9//312 //Distance between extruders
 	//#define X_MAX_POS 210 //Bed X
 	#define X_MIN_POS 0
@@ -673,7 +709,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 //Rapduch
 //Insert Filament parameters
-#define BOWDEN_LENGTH 875
+#define BOWDEN_LENGTH 15 //15 will be detracted
 #define EXTRUDER_LENGTH 50
 #define INSERT_FAST_SPEED 5000	
 #define INSERT_SLOW_SPEED 150
@@ -805,7 +841,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 	#endif
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == BCN3D_BOARD
 		#define EXTRUDER_OFFSET_Y {0.0,  -0.15}  // (in mm) for each extruder, offset of the hotend on the Y axis
 		#define EXTRUDER_OFFSET_Z {0.0 , 0.0}
 #endif
