@@ -102,11 +102,11 @@
 //Defining Boards supported
 #define BCN3D_BOARD		15
 #define MEGATRONICS_V3	703
-#define RUMBA_BNC3D		16
+#define RUMBA_BCN3D		16
 
 #ifndef MOTHERBOARD
 //#define MOTHERBOARD MEGATRONICS_V3 //Megatronics v3
-#define MOTHERBOARD RUMBA_BNC3D 
+#define MOTHERBOARD RUMBA_BCN3D 
 #endif
 
 #if MOTHERBOARD == MEGATRONICS_V3
@@ -115,7 +115,7 @@
 #endif
 
 //invert axis
-#if MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == RUMBA_BCN3D
 #define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true
@@ -125,20 +125,20 @@
 #endif
 
 //PID values
-#if MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == RUMBA_BCN3D
 #define  DEFAULT_Kp  15.16
 #define  DEFAULT_Ki  1.16
 #define  DEFAULT_Kd  49.38
 #endif						
 
-#if MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == RUMBA_BCN3D
 #define  DEFAULT_bedKp 218.76
 #define  DEFAULT_bedKi 38.70
 #define  DEFAULT_bedKd 321.59
 #endif
 
 //max distances
-#if MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == RUMBA_BCN3D
 #define X_MAX_POS 303.9//312 //Distance between extruders
 	//#define X_MAX_POS 210 //Bed X
 #define X_MIN_POS 0
@@ -148,7 +148,7 @@
 #define Z_MIN_POS 0
 #endif
 
-#if MOTHERBOARD == RUMBA_BNC3D
+#if MOTHERBOARD == RUMBA_BCN3D
 #define EXTRUDER_OFFSET_Y {0.0,  -0.15}  // (in mm) for each extruder, offset of the hotend on the Y axis
 #define EXTRUDER_OFFSET_Z {0.0 , 0.0}
 #endif
@@ -743,7 +743,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 
 #ifdef Z_SIGMA_AUTOLEVEL
-	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BCN3D
 		#define XY_SIGMA_TRAVEL_SPEED 4000
 	#else
 		#define XY_SIGMA_TRAVEL_SPEED 8000
@@ -762,7 +762,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 		#endif
 	#endif
 	
-	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BCN3D
 		#define X_SIGMA_PROBE_OFFSET_FROM_EXTRUDER  17//20
 		#define Y_SIGMA_PROBE_OFFSET_FROM_EXTRUDER	24
 		#define Z_SIGMA_PROBE_OFFSET_FROM_EXTRUDER  2.7//2.80//3.4 //It is negative, it is compensated
@@ -878,7 +878,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #endif
 
 #ifdef SIGMA_TOUCH_SCREEN //If Sigma Touch Screen enabled
-	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+	#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BCN3D
 		//#define DEFAULT_AXIS_STEPS_PER_UNIT {160,160,3200,608}  //1/32 microstepping for BCN3D Board
 		#define DEFAULT_AXIS_STEPS_PER_UNIT {80,80,1600,152}	  //1/16 microstepping for BCN3D Board
 		//#define DEFAULT_AXIS_STEPS_PER_UNIT {40,40,800,102}	  //MK7 1/8 microstepping for BCN3D Board

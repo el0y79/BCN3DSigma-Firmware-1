@@ -14,8 +14,8 @@
 #define E1_MS2_PIN -1
 #define DIGIPOTSS_PIN -1
 #endif
-#ifndef RUMBA_BNC3D
-	#define RUMBA_BNC3D		16
+#ifndef RUMBA_BCN3D
+	#define RUMBA_BCN3D		16
 #endif
 
 //Rapduch
@@ -145,7 +145,7 @@
 
 //------------------------------
 
-#if MOTHERBOARD == RUMBA_BNC3D 
+#if MOTHERBOARD == RUMBA_BCN3D 
 
 #define KNOWN_BOARD 1
 #ifndef __AVR_ATmega2560__
