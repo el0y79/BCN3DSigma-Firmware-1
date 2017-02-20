@@ -716,7 +716,7 @@ void setup()
 	#ifdef SIGMA_TOUCH_SCREEN
 
 			
-		#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BNC3D
+		#if MOTHERBOARD == BCN3D_BOARD || MOTHERBOARD == RUMBA_BCN3D
 			MYSERIAL_SCREEN.begin(200000);			
 	
 			genie.Begin(MYSERIAL_SCREEN);   // Use Serial3  for talking to the Genie Library, and to the 4D Systems display
