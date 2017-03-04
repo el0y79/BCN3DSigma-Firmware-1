@@ -738,8 +738,10 @@ void setup()
 	setup_killpin();
 	setup_powerhold();
 	st_init();    // Initialize stepper, this enables interrupts!
+#if MOTHERBOARD == BCN3D_BOARD
 	pinMode(RELAY, OUTPUT);
 	digitalWrite(RELAY, LOW);
+#endif
 	MYSERIAL.begin(BAUDRATE);
 
 	SERIAL_PROTOCOLLNPGM(VERSION_STRING);
@@ -6973,6 +6975,7 @@ inline void gcode_M531(){  //Set Bed Offset screw
 	Config_StoreSettings();
 }
 inline void gcode_M535(){
+#if MOTHERBOARD == BCN3D_BOARD
 	int R=0, G=0, B=0;
 	if (code_seen('R')) R = (int)code_value();
 	if (code_seen('V')) G = (int)code_value();
@@ -6981,7 +6984,7 @@ inline void gcode_M535(){
 	analogWrite(RED, R);
 	analogWrite(GREEN, G);
 	analogWrite(BLUE, B);
-	
+#endif
 }
 inline void gcode_M540(){
 	#ifdef ABORT_ON_ENDSTOP_HIT_FEATURE_ENABLED
