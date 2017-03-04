@@ -350,7 +350,7 @@
 #endif
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD 
+#if MOTHERBOARD == BCN3D_BOARD
    #define  DEFAULT_bedKp 218.76
    #define  DEFAULT_bedKi 38.70
    #define  DEFAULT_bedKd 321.59
@@ -476,7 +476,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 #endif
 
-#if MOTHERBOARD == BCN3D_BOARD 
+#if MOTHERBOARD == BCN3D_BOARD
 #define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true

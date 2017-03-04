@@ -806,7 +806,7 @@ void setup()
 			
 			
 			genie.WriteStr(STRING_VERSION,VERSION_STRING);
-
+			
 #if MOTHERBOARD == BCN3D_BOARD		
 			while(led < 256){
 				if (millis() >= waitPeriod)
@@ -932,7 +932,7 @@ void setup()
 	digitalWrite(RELAY, HIGH); //Relay On
 	
 	
-		
+	
 	#endif
 
 	#if defined(CONTROLLERFAN_PIN) && CONTROLLERFAN_PIN > -1
@@ -1086,7 +1086,7 @@ void thermal_error_screen_on(){
 	processing_test = false;
 	is_changing_filament = false;
 }
-					
+				
 				
 void update_screen_printing(){
 	static uint32_t waitPeriod = millis();
