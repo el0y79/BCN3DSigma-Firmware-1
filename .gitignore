@@ -53,3 +53,4 @@ Debug/
 *.xml
 Marlin/__vm/Compile.vmps.xml
 *.xml
+*.suo
